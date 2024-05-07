@@ -1,7 +1,7 @@
 package main
 import (
 	"fmt"
-	"go_dir/pkg"
+	"proxy/client/pkg"
 	"flag"
 )
 

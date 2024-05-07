@@ -1,7 +1,7 @@
 package main
 
 import (
-	"dev/pkg"
+	"proxy/server/pkg"
 	"net/http"
 	"fmt"
 )
