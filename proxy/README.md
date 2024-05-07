@@ -8,3 +8,4 @@
 
 3、代理转发可执行文件/脚本到第三台主机执行
 
+![image](https://github.com/zoulele123/proxy/blob/main/images/tu.png)
