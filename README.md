@@ -8,4 +8,10 @@
 
 3、代理转发可执行文件/脚本到第三台主机执行
 
-![image](https://github.com/zoulele123/proxy/blob/main/images/tu.png)
+用法例子：
+1、获取metrics信息
+go run main.go -m metrics -ip 192.168.145.102:9292
+2、发送文件自动压缩为后缀为.gz文件
+go run main.go -m upload -s /root/zll.tgz -ip 192.168.145.102
+3、发送脚本文件到目标端执行(目前只支撑shell)
+go run main.go -m script -s /root/test.sh -ip 192.168.145.102
