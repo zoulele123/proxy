@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"net/url"
 )
-func SendMetrics(targetIP string) {
+func SendMetrics(serverIP, targetIP string) {
 	if targetIP == "" {
 		fmt.Println("Usage: go run client.go -ip <target_ip:port>")
 		return
@@ -17,7 +17,7 @@ func SendMetrics(targetIP string) {
 	queryString := queryParams.Encode()
 
 	// 创建 POST 请求
-	req, err := http.NewRequest("POST", "http://127.0.0.1:8080/metrics?"+queryString, nil)
+	req, err := http.NewRequest("POST", "http://" + serverIP + "/metrics?" + queryString, nil)
 	if err != nil {
 		fmt.Println("Error creating request:", err)
 		return

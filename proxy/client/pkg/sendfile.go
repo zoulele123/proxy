@@ -34,7 +34,7 @@ func compressFile(filePath string) ([]byte, error) {
 	return buf.Bytes(), nil
 }
 
-func SendFile(filePath, username, password, targetIP string) {
+func SendFile(serverIP, filePath, username, password, targetIP string) {
 	// 检查参数是否完整
 	if filePath == "" || username == "" || password == "" || targetIP == "" {
 		fmt.Println("Usage: go run client.go -F <file_path> -username <username> -password <password> -ip <target_ip>")
@@ -73,7 +73,7 @@ func SendFile(filePath, username, password, targetIP string) {
 	}
 
 	// 创建 POST 请求
-	req, err := http.NewRequest("POST", "http://127.0.0.1:8080/upload", body)
+	req, err := http.NewRequest("POST", "http://" + serverIP + "/upload", body)
 	if err != nil {
 		fmt.Println("Error creating request:", err)
 		return
