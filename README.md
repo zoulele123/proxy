@@ -16,7 +16,7 @@ go run main.go -m metrics -ip 192.168.145.102:9292
 
 2、发送文件自动压缩为后缀为.gz文件
 
-go run main.go -m upload -s /root/zll.tgz -ip 192.168.145.102
+go run main.go -m upload -s /root/test.tgz -ip 192.168.145.102
 
 3、发送脚本文件到目标端执行(目前只支撑shell)
 
