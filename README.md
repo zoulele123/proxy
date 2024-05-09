@@ -14,7 +14,7 @@
 
 go run main.go -m metrics -ip 192.168.145.102:9292
 
-2、发送文件自动压缩为后缀为.gz文件
+2、发送文件自动压缩为后缀为.gz文件(默认发送到/tmp下)
 
 go run main.go -m upload -s /root/test.tgz -ip 192.168.145.102
 
